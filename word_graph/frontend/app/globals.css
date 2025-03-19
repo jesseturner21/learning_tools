@@ -1,26 +1,63 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    margin: 0;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  .card {
+    width: 300px;
+    height: 200px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .buttons {
+    margin-top: 20px;
+  }
+  
+  button {
+    background: #ff7eb3;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    margin: 0 10px;
+    box-shadow: 0px 5px 15px rgba(255, 126, 179, 0.4);
+  }
+  
+  button:hover {
+    background: #ff3e82;
+  }
+  
+  #selected-text {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: white;
+    font-style: italic;
+  }
+  
